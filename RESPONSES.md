@@ -1,5 +1,14 @@
 #### Support Email Response
-
+class TestMailer < ActionMailer::Base
+  default from: '@example.com'
+  def simple_message(recipient)
+    mail(
+      to: recipient,
+      subject: 'Support Email response ',
+      body: 'We are looking into the matter and will inform soon on the updates'
+    )
+  end
+end
 [your response goes here]
 
 ---
